@@ -3,20 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font: 15pt Arial;
+:root{
+    height: 100vh;
 }
 body {
+    font: 15pt Arial;
     background-image: linear-gradient(45deg,black,blue);
-    max-height: 100vh;
 }
 
 main {
     background-color: rgba(255,255,255,.8);
-    margin: 1rem auto 1rem auto;
     padding: 4rem 5% 2.5rem;
     width: 90%;
     display: flex;
+    margin: 1rem auto;
     flex-direction: column;
     gap: .5rem;
     position: relative;
@@ -31,8 +31,8 @@ main::before {
     display: block;
     position: absolute;
     text-indent: 2rem;
-    top: .0rem;
-    left: .0rem;
+    top: 0px;
+    left: 0px;
     width: 100%;
     padding: .5rem 0;
 }
@@ -47,29 +47,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-span.foco {
-    font-weight: bold;
-    color: #7e050c;
-}
-
-.botao {
-	background-color: #273747;
-	color: white;
-	padding: .8rem;
-    margin: auto;
-    box-shadow: .2rem .2rem .1rem #aaaaaa;
-}
-fieldset, form{
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-fieldset div{
-    display: flex;
-    justify-content: space-between;
-}
-input, select, .botao{
-    width: 70%;
+fieldset{
+    padding: .5rem;
 }

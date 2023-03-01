@@ -3,17 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font: 15pt Arial;
+:root{
+    height: 100vh;
 }
 body {
+    font: 15pt Arial;
     background-image: linear-gradient(45deg,black,blue);
-    max-height: 100vh;
 }
 
 main {
     background-color: rgba(255,255,255,.8);
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto 0;
     padding: 4rem 5% 2.5rem;
     width: 90%;
     display: flex;

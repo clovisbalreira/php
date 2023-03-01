@@ -3,19 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font: 15pt Arial;
+:root{
+    height: 100vh;
 }
 body {
+    font: 15pt Arial;
     background-image: linear-gradient(45deg,black,blue);
 }
-
 main {
     background-color: rgba(255,255,255,.8);
-    margin: 100px auto 100px auto;
     padding: 4rem 5% 2.5rem;
     width: 90%;
     display: flex;
+    margin: 1rem auto;
     flex-direction: column;
     gap: .5rem;
     position: relative;
@@ -46,16 +46,3 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-span.foco {
-    font-weight: bold;
-    color: #7e050c;
-}
-
-.botao {
-	background-color: #273747;
-	color: white;
-	padding: 8px;
-	box-shadow: 2px 2px 1px #aaaaaa;
-}
-
