@@ -1,0 +1,101 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ddd;
+    font-family: Tahoma;
+    width: 100vw;
+}
+header{
+    text-align: right;
+}
+main#corpo{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px  #777;
+}
+form#busca{
+    font-size: 10pt;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: end;
+    gap: .2rem;
+    flex-wrap: wrap;
+}
+
+table.listagem{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.listagem tr{
+    height: 5rem;
+}
+table.listagem td{
+    border: .1rem solid #ddd;
+    padding: 1rem;
+}
+table.listagem tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table.listagem td:nth-child(1){
+    width: 5rem;
+}
+table.listagem td:nth-child(3){
+    width: 7.5rem;
+}
+table.listagem td:nth-child(3) div{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+table.detalhes{
+    width: 100%;
+}
+i:nth-child(1), i:nth-child(2){
+    padding-right: .3rem;
+}
+table.detalhes td{
+    padding: 10px;
+    vertical-align: top;
+}
+img.mini{
+    width: 5rem;
+}
+img.full{
+    height: 40rem;
+}
+footer{
+    text-align: center;
+    font-family: Arial;
+    font-size: 10pt;
+    margin: 1rem 0;
+}
+div.sucesso, div.aviso, div.erro{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    gap: .5rem;
+    padding: .7rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+}
+div.sucesso{
+    background-color: rgb(226, 237, 218);
+    color: rgb(74,116,67);
+}
+div.aviso{
+    background-color: rgb(251, 248, 229);
+    color: rgb(134,116,66);
+}
+div.erro{
+    background-color: rgb(239, 223, 222);
+    color: rgb(157,75,69);
+}

@@ -1,0 +1,14 @@
+<?php
+ 
+/**
+ * Conecta com o MySQL usando PDO
+ */
+function db_connect()
+{
+   // $PDO = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME.';charset=utf8', DB_USER, DB_PASS);
+    $PDO = new PDO('mysql:host=' . DB_HOST . 
+    
+    ';port=' . PORT . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
+   
+    return $PDO;
+}

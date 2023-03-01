@@ -1,0 +1,403 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tempo de Gera��o: Jan 20, 2010 as 04:36 
+-- Vers�o do Servidor: 5.1.37
+-- Vers�o do PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Banco de Dados: `carrinho_compras`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_carrinho`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_carrinho` (
+  `PROD_CODIGO` int(11) NOT NULL,
+  `CAR_SESSAO` varchar(60) NOT NULL,
+  `CAR_QUANTIDADE` int(11) DEFAULT NULL,
+  `CAR_VALOR` decimal(15,2) DEFAULT NULL,
+  `CAR_DATA` date DEFAULT NULL,
+  PRIMARY KEY (`PROD_CODIGO`,`CAR_SESSAO`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tbl_carrinho`
+--
+
+INSERT INTO `tbl_carrinho` (`PROD_CODIGO`, `CAR_SESSAO`, `CAR_QUANTIDADE`, `CAR_VALOR`, `CAR_DATA`) VALUES
+(13, 'o9143k2uji5v3i5mo8l7hvu8r1', 1, '119.00', '0000-00-00'),
+(6, 'o9143k2uji5v3i5mo8l7hvu8r1', 1, '99.00', '0000-00-00'),
+(9, 'o9143k2uji5v3i5mo8l7hvu8r1', 1, '139.00', '0000-00-00'),
+(17, 'o9143k2uji5v3i5mo8l7hvu8r1', 1, '99.00', '0000-00-00'),
+(12, 'o9143k2uji5v3i5mo8l7hvu8r1', 1, '119.00', '0000-00-00'),
+(6, '71pcp37k572jpds097ji3u0951', 1, '99.00', '0000-00-00'),
+(11, '71pcp37k572jpds097ji3u0951', 1, '99.00', '0000-00-00'),
+(6, '465ps27k842tnkkq8njegc1e60', 1, '99.00', '0000-00-00'),
+(9, '465ps27k842tnkkq8njegc1e60', 1, '139.00', '0000-00-00'),
+(5, '465ps27k842tnkkq8njegc1e60', 1, '99.00', '0000-00-00'),
+(7, '465ps27k842tnkkq8njegc1e60', 1, '109.00', '0000-00-00'),
+(7, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '109.00', '0000-00-00'),
+(10, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '99.00', '0000-00-00'),
+(13, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '119.00', '0000-00-00'),
+(14, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '129.00', '0000-00-00'),
+(15, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '114.00', '0000-00-00'),
+(8, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '139.00', '0000-00-00'),
+(17, 'l86ul7u1s9v0pc59m0ti1gl0m4', 1, '99.00', '0000-00-00'),
+(14, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '129.00', '0000-00-00'),
+(7, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '109.00', '0000-00-00'),
+(5, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '99.00', '0000-00-00'),
+(12, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '119.00', '0000-00-00'),
+(15, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '114.00', '0000-00-00'),
+(6, 'i6jar3pq7fm6ldha3nqetmugu5', 1, '99.00', '0000-00-00'),
+(13, 's2u0eqi5vinojic21ng32642g4', 1, '119.00', '0000-00-00'),
+(5, '5bgcirnbfs42pk6sh5g1nvbjm5', 1, '99.00', '0000-00-00'),
+(8, 's2u0eqi5vinojic21ng32642g4', 2, '139.00', '0000-00-00'),
+(15, 's2u0eqi5vinojic21ng32642g4', 1, '114.00', '0000-00-00'),
+(2, 's2u0eqi5vinojic21ng32642g4', 3, '109.00', '0000-00-00'),
+(6, 's2u0eqi5vinojic21ng32642g4', 1, '99.00', '0000-00-00'),
+(2, 'bp6ku1pc6sea4te6i7h4pp1683', 1, '109.00', '0000-00-00'),
+(7, 'bp6ku1pc6sea4te6i7h4pp1683', 1, '109.00', '0000-00-00'),
+(6, 'bp6ku1pc6sea4te6i7h4pp1683', 1, '99.00', '0000-00-00'),
+(17, 'qr49ofk57g615ds68ib6q1lfd5', 1, '99.00', '0000-00-00'),
+(9, 'u679d537ru8v0b8gq9vfu411i7', 1, '139.00', '0000-00-00'),
+(14, 'u679d537ru8v0b8gq9vfu411i7', 2, '129.00', '0000-00-00'),
+(6, 'u679d537ru8v0b8gq9vfu411i7', 1, '99.00', '0000-00-00'),
+(10, 'u679d537ru8v0b8gq9vfu411i7', 1, '99.00', '0000-00-00'),
+(15, 'u679d537ru8v0b8gq9vfu411i7', 1, '114.00', '0000-00-00'),
+(16, 'u679d537ru8v0b8gq9vfu411i7', 1, '114.00', '0000-00-00'),
+(8, '3minavh9htbh4pbigt9q9cmhs3', 1, '139.00', '2010-01-16'),
+(10, '3minavh9htbh4pbigt9q9cmhs3', 2, '99.00', '2010-01-16'),
+(9, '3minavh9htbh4pbigt9q9cmhs3', 1, '139.00', '2010-01-16'),
+(11, '3minavh9htbh4pbigt9q9cmhs3', 1, '99.00', '0000-00-00'),
+(16, '3minavh9htbh4pbigt9q9cmhs3', 1, '114.00', '2010-01-16'),
+(13, '3minavh9htbh4pbigt9q9cmhs3', 1, '119.00', '2010-01-16'),
+(2, 'u997ql95henaue1rme7em40t44', 1, '109.00', '2010-01-16'),
+(9, 'u997ql95henaue1rme7em40t44', 1, '139.00', '2010-01-16'),
+(4, 'vh0ahf8ptipdlm4k9glsvvsmr0', 1, '99.00', '2010-01-18'),
+(2, 'vh0ahf8ptipdlm4k9glsvvsmr0', 1, '109.00', '2010-01-18'),
+(6, 'vh0ahf8ptipdlm4k9glsvvsmr0', 1, '99.00', '2010-01-18'),
+(14, 'nulbpb47r6rh3fnpk37746inf5', 1, '129.00', '2010-01-20');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_categoria`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_categoria` (
+  `CAT_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `CAT_DESCRICAO` varchar(30) NOT NULL,
+  PRIMARY KEY (`CAT_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+--
+-- Extraindo dados da tabela `tbl_categoria`
+--
+
+INSERT INTO `tbl_categoria` (`CAT_CODIGO`, `CAT_DESCRICAO`) VALUES
+(4, 'Delphi'),
+(2, 'Java'),
+(3, 'Php'),
+(5, 'Banco de Dados'),
+(6, 'Flex'),
+(7, 'Algoritmos e Lógica'),
+(8, 'Moodle'),
+(9, 'Windows e Office'),
+(10, 'SolidWorks'),
+(11, 'Html Javascript CSS'),
+(12, 'Quest3d'),
+(13, 'Excel Avançado'),
+(14, 'Fireworks');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_cidade`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_cidade` (
+  `CID_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `CID_DESCRICAO` varchar(40) NOT NULL,
+  `CID_UF` char(2) DEFAULT NULL,
+  PRIMARY KEY (`CID_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+
+--
+-- Extraindo dados da tabela `tbl_cidade`
+--
+
+INSERT INTO `tbl_cidade` (`CID_CODIGO`, `CID_DESCRICAO`, `CID_UF`) VALUES
+(5, 'Guaruja do Sul', 'SC'),
+(6, 'Carazinho', 'RS'),
+(7, 'Gurupi', 'TO'),
+(28, 'Sarandi', 'RS'),
+(26, 'Neri Neitzke', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_cliente`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_cliente` (
+  `CLI_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `CID_CODIGO` int(11) NOT NULL,
+  `CLI_NOME` varchar(40) NOT NULL,
+  `CLI_ENDERECO` varchar(50) DEFAULT NULL,
+  `CLI_NUMERO` varchar(10) DEFAULT NULL,
+  `CLI_COMPLEMENTO` varchar(20) DEFAULT NULL,
+  `CLI_BAIRRO` varchar(30) DEFAULT NULL,
+  `CLI_CEP` char(10) DEFAULT NULL,
+  `CLI_FONERES` varchar(16) DEFAULT NULL,
+  `CLI_FONECEL` varchar(16) DEFAULT NULL,
+  `CLI_FONECOM` varchar(16) DEFAULT NULL,
+  `CLI_CPF` varchar(14) DEFAULT NULL,
+  `CLI_RG` varchar(20) DEFAULT NULL,
+  `CLI_DATACADASTRO` date DEFAULT NULL,
+  `CLI_DATANASC` date DEFAULT NULL,
+  `CLI_EMAIL` varchar(60) DEFAULT NULL,
+  `CLI_LOGIN` varchar(10) DEFAULT NULL,
+  `CLI_SENHA` varchar(10) DEFAULT NULL,
+  `CLI_DATAULTCOMP` date DEFAULT NULL,
+  `CLI_VALOR_ULTCOMP` decimal(15,2) DEFAULT NULL,
+  `CLI_VALOR_TOTAL` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`CLI_CODIGO`),
+  KEY `FK_CIDADES_CLIENTES` (`CID_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `tbl_cliente`
+--
+
+INSERT INTO `tbl_cliente` (`CLI_CODIGO`, `CID_CODIGO`, `CLI_NOME`, `CLI_ENDERECO`, `CLI_NUMERO`, `CLI_COMPLEMENTO`, `CLI_BAIRRO`, `CLI_CEP`, `CLI_FONERES`, `CLI_FONECEL`, `CLI_FONECOM`, `CLI_CPF`, `CLI_RG`, `CLI_DATACADASTRO`, `CLI_DATANASC`, `CLI_EMAIL`, `CLI_LOGIN`, `CLI_SENHA`, `CLI_DATAULTCOMP`, `CLI_VALOR_ULTCOMP`, `CLI_VALOR_TOTAL`) VALUES
+(1, 6, 'Neri Aldoir Neitzke', 'Av Flores da Cunha', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1111-11-11', '1111-11-11', '1', '1', '1', '1111-11-11', '1.00', '1.00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_fornecedor`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_fornecedor` (
+  `FOR_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `CID_CODIGO` int(11) NOT NULL,
+  `FOR_RAZAOSOCIAL` varchar(40) NOT NULL,
+  `FOR_NOME_FANTASIA` varchar(40) DEFAULT NULL,
+  `FOR_ENDERECO` varchar(50) DEFAULT NULL,
+  `FOR_BAIRRO` varchar(30) DEFAULT NULL,
+  `FOR_FONE` varchar(16) DEFAULT NULL,
+  `FOR_RESPONSAVEL` varchar(50) DEFAULT NULL,
+  `FOR_EMAIL` varchar(60) DEFAULT NULL,
+  `FOR_CNPJ` varchar(18) DEFAULT NULL,
+  `FOR_CEP` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`FOR_CODIGO`),
+  KEY `FK_CIDADE_FORNECEDOR` (`CID_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+--
+-- Extraindo dados da tabela `tbl_fornecedor`
+--
+
+INSERT INTO `tbl_fornecedor` (`FOR_CODIGO`, `CID_CODIGO`, `FOR_RAZAOSOCIAL`, `FOR_NOME_FANTASIA`, `FOR_ENDERECO`, `FOR_BAIRRO`, `FOR_FONE`, `FOR_RESPONSAVEL`, `FOR_EMAIL`, `FOR_CNPJ`, `FOR_CEP`) VALUES
+(4, 6, 'Universidade Luterana', 'Ulbra', 'Br', 'mato', '54 3329 1111', 'Valdemar', 'ulbra@ulbra.br', '1321321', '99500-000'),
+(3, 5, 'Neri Neitzke', 'Informaticon Cursos', 'Av Flores da Cunha', 'centro', '54 3330 1222', 'Neri', 'videoaulas@inforamaticon.com.br', '321654', '99500-000');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_imagem`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_imagem` (
+  `IMG_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `PROD_CODIGO` int(11) NOT NULL,
+  `IMG_DESCRICAO` text,
+  PRIMARY KEY (`IMG_CODIGO`),
+  KEY `FK_IMAGENS_DO_PRODUTO` (`PROD_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+
+--
+-- Extraindo dados da tabela `tbl_imagem`
+--
+
+INSERT INTO `tbl_imagem` (`IMG_CODIGO`, `PROD_CODIGO`, `IMG_DESCRICAO`) VALUES
+(31, 9, 'javaee.jpg'),
+(29, 8, 'delphiIII.jpg'),
+(28, 7, 'delphi7.jpg'),
+(30, 2, 'javaseII.jpg'),
+(25, 5, 'delphi.jpg'),
+(27, 6, 'php.gif'),
+(26, 4, 'java.jpg'),
+(32, 10, 'javameI.jpg'),
+(33, 11, 'j2meII.jpg'),
+(34, 12, 'hibernate.JPG'),
+(35, 13, 'banco1.jpg'),
+(36, 14, 'oracle.jpg'),
+(37, 15, 'Flex1.jpg'),
+(38, 16, 'Flex2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_itens_pedido`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_itens_pedido` (
+  `PROD_CODIGO` int(11) NOT NULL,
+  `PED_CODIGO` int(11) NOT NULL,
+  `PED_QUANT` int(11) DEFAULT NULL,
+  `PED_VALOR` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`PROD_CODIGO`,`PED_CODIGO`),
+  KEY `FK_TBL_ITENS_PEDIDO2` (`PED_CODIGO`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tbl_itens_pedido`
+--
+
+INSERT INTO `tbl_itens_pedido` (`PROD_CODIGO`, `PED_CODIGO`, `PED_QUANT`, `PED_VALOR`) VALUES
+(5, 12, 1, '99.00'),
+(15, 11, 1, '114.00'),
+(5, 11, 1, '99.00'),
+(13, 11, 1, '119.00'),
+(13, 12, 1, '119.00'),
+(17, 13, 1, '99.00'),
+(5, 13, 1, '99.00'),
+(14, 14, 1, '129.00'),
+(13, 14, 2, '119.00'),
+(14, 15, 1, '129.00'),
+(9, 16, 1, '139.00'),
+(14, 16, 1, '129.00'),
+(7, 17, 1, '109.00'),
+(13, 18, 1, '119.00'),
+(14, 18, 1, '129.00'),
+(13, 19, 1, '119.00'),
+(14, 19, 1, '129.00'),
+(6, 20, 1, '99.00'),
+(11, 21, 1, '99.00'),
+(14, 21, 1, '129.00'),
+(6, 22, 1, '99.00'),
+(2, 22, 1, '109.00');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_pedido`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_pedido` (
+  `PED_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `CLI_CODIGO` int(11) NOT NULL,
+  `PED_DATA` date DEFAULT NULL,
+  `PED_HORA` time DEFAULT NULL,
+  `PED_BOLETO` text,
+  `PED_VALORTOTAL` decimal(15,2) DEFAULT NULL,
+  `PED_VALORFRETE` decimal(15,2) DEFAULT NULL,
+  `PED_STATUS` char(1) DEFAULT NULL,
+  `PED_FORMAPAGTO` char(1) DEFAULT NULL,
+  `PED_OBSERVACAO` text,
+  PRIMARY KEY (`PED_CODIGO`),
+  KEY `FK_PEDIDO_CLIENTE` (`CLI_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+
+--
+-- Extraindo dados da tabela `tbl_pedido`
+--
+
+INSERT INTO `tbl_pedido` (`PED_CODIGO`, `CLI_CODIGO`, `PED_DATA`, `PED_HORA`, `PED_BOLETO`, `PED_VALORTOTAL`, `PED_VALORFRETE`, `PED_STATUS`, `PED_FORMAPAGTO`, `PED_OBSERVACAO`) VALUES
+(1, 1, '2010-01-16', '19:03:58', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(2, 1, '2010-01-18', '13:35:19', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(3, 1, '2010-01-18', '13:53:58', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(4, 1, '2010-01-20', '09:38:57', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(5, 1, '2010-01-20', '10:34:10', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(6, 1, '2010-01-20', '12:20:45', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(7, 1, '2010-01-20', '12:22:17', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(8, 1, '2010-01-20', '12:23:27', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(9, 1, '2010-01-20', '12:26:09', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(10, 1, '2010-01-20', '12:27:06', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(11, 1, '2010-01-20', '12:31:03', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(12, 1, '2010-01-20', '12:34:13', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(13, 1, '2010-01-20', '12:35:33', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(14, 1, '2010-01-20', '12:36:21', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(15, 1, '2010-01-20', '14:09:54', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(16, 1, '2010-01-20', '15:34:43', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(17, 1, '2010-01-20', '15:57:05', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(18, 1, '2010-01-20', '16:07:38', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(19, 1, '2010-01-20', '16:10:11', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(20, 1, '2010-01-20', '16:12:06', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(21, 1, '2010-01-20', '16:19:17', NULL, '0.00', '0.00', 'P', 'B', NULL),
+(22, 1, '2010-01-20', '16:27:13', NULL, '0.00', '0.00', 'P', 'B', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_produto`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_produto` (
+  `PROD_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `FOR_CODIGO` int(11) NOT NULL,
+  `CAT_CODIGO` int(11) NOT NULL,
+  `PROD_DESCRICAO` varchar(40) NOT NULL,
+  `PROD_VALOR` decimal(10,2) DEFAULT NULL,
+  `PROD_QUANTIDADE` decimal(10,2) DEFAULT NULL,
+  `PROD_TIPO` varchar(5) DEFAULT NULL,
+  `PROD_OBS` text,
+  PRIMARY KEY (`PROD_CODIGO`),
+  KEY `FK_PRODUTO_CATEGORIA` (`CAT_CODIGO`),
+  KEY `FK_PRODUTO_FORNECEDOR` (`FOR_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+
+--
+-- Extraindo dados da tabela `tbl_produto`
+--
+
+INSERT INTO `tbl_produto` (`PROD_CODIGO`, `FOR_CODIGO`, `CAT_CODIGO`, `PROD_DESCRICAO`, `PROD_VALOR`, `PROD_QUANTIDADE`, `PROD_TIPO`, `PROD_OBS`) VALUES
+(4, 3, 2, 'Java I SE - Sistema de Estoque', '99.00', '50.00', 'unid', 'Java I SE - Sistema de Controle de Estoque'),
+(2, 3, 2, 'Java II SE O.O. 200 videos', '109.00', '50.00', 'unid', 'Aprenda Orientação a objetos com java'),
+(5, 4, 4, 'Delphi I - Estoque', '99.00', '800.00', 'unid', 'Primeiro Curso de Delphi, em que foi mostrado como criar um sistema de controle de estoque!'),
+(6, 3, 3, 'Curso de PHP com Mysql e Dreamweaver cs4', '99.00', '800.00', 'unid', 'primeiro curso de php feito pelo Nerizon'),
+(7, 3, 4, 'Delphi II Avançado - 6.6 giga', '109.00', '900.00', 'unid', 'Depois do grande sucesso que meu primeiro curso de Delphi fez, acabei lançando este segundo curso, Delphi 7 avançado, e ainda mostro também como instalar e criar aplicativos usando o Delphi 2007'),
+(8, 3, 4, 'Delphi III Biometria O.O. XML Criptograf', '139.00', '900.00', 'unid', 'Lançamento 24/01/2008 - Meu 3º e mais trabalhoso curso de Delphi 7 Avançado contendo:  (Biometria (impressão digital), XML, Criptografia, Report Builder, Rave report, Fast Report, Orientação a Objetos, Criação de componentes, conexões com Oracle, SQL Server, MySQL, PostgreSQL e Firebird (usando componentes Zeos, Ado, DBExpress e BDE), controle de login, tabelas virtuais.'),
+(9, 3, 2, 'Java III - EE WEB', '139.00', '900.00', 'unid', 'J2EE'),
+(10, 3, 2, 'Java IV ME - celular', '99.00', '900.00', 'unid', 'São mais de 100 vídeo aulas, aprenda: Instalar, configurar, criar aplicativos diversos, menus, copiar para o celular (e rodar nele). Você vai aprender a criar diversos aplicativos para rodar no celular. Também verá como criar um sistema que armazene e manipule os dados na memória do celular (RMS).'),
+(11, 3, 2, 'Java V - ME Celuar com banco de Dados', '99.00', '900.00', 'unid', ''),
+(12, 3, 2, 'Java VI Hibernate ', '119.00', '900.00', 'unid', 'O Hibernate é um framework para o mapeamento objeto-relacional, ele facilita o mapeamento dos atributos entre uma base tradicional de dados relacionais e o modelo objeto de uma aplicação, com isso, diminui a complexidade de criar programas em java, agilizando assim o desenvolvimento.'),
+(13, 3, 5, 'SQL + Banco + Modelagem', '119.00', '900.00', 'unid', ''),
+(14, 3, 5, 'Oracle pl/sql Forms Reports', '129.00', '900.00', 'unid', 'ORACLE PL/SQL Procedures Functions Triggers Oracle Forms e Reports, custo R$129,00\r\nlançado em 14/07/2009'),
+(15, 3, 6, 'Flex 164 videos 3 dvd', '114.00', '900.00', 'unid', '3dvd e 164 Vídeo Aulas de Flex, usado para criar aplicações ricas para internet. Uma das mais valorizadas linguagens de programação da atualidade. O Flex é uma estrutura de código aberto altamente produtiva e gratuita para a criação e manutenção de aplicativos Web!'),
+(16, 3, 6, 'Flex com Java BlazeDS e Banco ', '114.00', '900.00', 'unid', '7.5 Gibagyte e 2 dvd em 84 Vídeo Aulas de Flex com Java e BlazeDS e Banco de Dados e Relatório. O Flex é uma estrutura de código aberto altamente produtiva e gratuita para a criação e manutenção de aplicativos Web!'),
+(17, 3, 7, 'Algoritmos e Lógica Pascal Java e C', '99.00', '900.00', 'unid', 'Agora sim, você que quer iniciar nesse fantástico mundo da programação, então comece por esse curso. \r\nSe você acha que entende bem de algoritmo e lógica, mas tem dificuldade de implementar no Java ou Pascal no no C,\r\nesse curso também lhe será muito útil. Por fim, com certeza você conhece alguém que tem dificuldade em aprender programar, \r\nentão indique esse curso para ele(a).');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbl_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_usuario` (
+  `USU_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
+  `USU_NOME` varchar(40) NOT NULL,
+  `USU_LOGIN` varchar(10) NOT NULL,
+  `USU_SENHA` text NOT NULL,
+  `USU_NIVEL` char(1) DEFAULT NULL,
+  PRIMARY KEY (`USU_CODIGO`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Extraindo dados da tabela `tbl_usuario`
+--
+
+INSERT INTO `tbl_usuario` (`USU_CODIGO`, `USU_NOME`, `USU_LOGIN`, `USU_SENHA`, `USU_NIVEL`) VALUES
+(3, 'Neri Aldoir Neitzke', 'a', 'YQ==', 'A'),
+(5, 'Lisiane neitzke', 'lisi', 'bGlzaQ==', 'A'),
+(6, 'Gustavo Neri Batista Neitzke', 'guto', 'Z3V0b25laXR6a2U=', 'A'),
+(7, 'lucas', 'lucas', 'dc53fc4f621c80bdc2fa0329a6123708', 'A');
