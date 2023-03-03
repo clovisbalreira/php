@@ -1,3 +1,10 @@
+<?php
+    require_once 'includes/banco.php'; 
+    require_once 'includes/login.php'; 
+    require_once 'functions/functions.php';
+    $ordem = $_GET['o'] ?? 'cod';
+    $chave = $_GET['c'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -9,13 +16,6 @@
         <title>Listagem de jogos</title>
     </head>
     <body>
-        <?php
-            require_once 'includes/banco.php'; 
-            require_once 'includes/login.php'; 
-            require_once 'functions/functions.php';
-            $ordem = $_GET['o'] ?? 'cod';
-            $chave = $_GET['c'] ?? '';
-        ?>
         <main id="corpo">
             <?php require_once 'topo.php'?>
             <h1>Escolha seu jogo</h1>

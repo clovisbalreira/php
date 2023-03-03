@@ -17,6 +17,7 @@
             <a href="./ex004/index.php" target="_black">Tipos Primitivos</a>
             <a href="./ex005/index.php" target="_black">Tipos String</a>
             <a href="./ex006/index.php" target="_black">Formulario</a>
+            <a href="./ex007/index.php" target="_black">Operadores aritméticos, expressões aritméticas</a>
     </main>
 </body>
 </html>

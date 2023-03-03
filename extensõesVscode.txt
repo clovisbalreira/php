@@ -1,6 +1,5 @@
 Pacote de Idioma Português Brasileiro para VS Code
 PHP Intelephense
-Npm Intellisense
-format in php
-vsc-php-snippets
+format Html in php
+PHP Awesome Snippets
 

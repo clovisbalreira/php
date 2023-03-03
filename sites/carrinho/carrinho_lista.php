@@ -2,10 +2,8 @@
     class layout{
 
         function categoria_listar($busca){
-            echo '<ul>';
-        
             if(!$busca){
-                echo "<tr><td>Infelizmente a busca teu um erro $busca";
+                echo "<div>Infelizmente a busca teu um erro $busca</div>";
             } else {
                 if ( $busca->num_rows > 0){
                     while($reg = $busca->fetch_object()){
@@ -18,20 +16,18 @@
         function mostrar_produtos($busca){
             $imagem = new carrinho_manutencao();
             if(!$busca){
-                echo "<tr><td>Infelizmente a busca teu um erro $busca";
+                echo "<div>Infelizmente a busca teu um erro $busca</div";
             } else {
                 if ( $busca->num_rows > 0){
-                    echo "<table>";        
-                    echo "<tr>";
-                        while($reg = $busca->fetch_object()){
-                        echo "<td>";
-                            echo "<div class='mostraProdutos'>";
-                                echo "<img class='produto' src='admin/imagens/".$imagem->listar_imagem($reg->PROD_CODIGO)."'>";
-                                echo $reg->PROD_DESCRICAO."<BR>";
-                                echo $reg->PROD_VALOR."<BR>";;
-                                echo "<a href='index.php?id=1&produto=$reg->PROD_CODIGO&acao=incluir_no_carrinho'><img  src='admin/imagens/botao_comprar.gif'></a>";
-                                echo '<td>';
-                            echo "</div>";
+                    while($reg = $busca->fetch_object()){
+                        echo "<div class='mostraProdutos'>";
+                            echo "<img class='produto' src='admin/imagens/".$imagem->listar_imagem($reg->PROD_CODIGO)."'>";
+                            echo "<div><p>".$reg->PROD_DESCRICAO."</p>";
+                            echo "<p>R$: ".$reg->PROD_VALOR."</p></div>";
+                            echo "<a href='index.php?id=1&produto=$reg->PROD_CODIGO&acao=incluir_no_carrinho'><span class='material-symbols-outlined'>
+                            shopping_cart
+                            </span></a>";
+                        echo "</div>";
                     }
                 }
             }

@@ -2,7 +2,7 @@
     $banco = new mysqli('localhost','root','','carrinho');
     //se encontrar um erro no banco e mata o banco
     if($banco->connect_errno){
-        echo "<p>Encontrei um erro $banco->errno --> $banco->connect_error</p>";
+        echo "<p>Encontrei um erro $banco->errno --> $banco->errno</p>";
         die();
     }//else{ echo 'conectou';}
 

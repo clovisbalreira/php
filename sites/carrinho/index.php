@@ -14,15 +14,18 @@
         <?php
             require_once 'admin/funcao/funcoes.php' ;
         ?>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <title>carrinho</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <header>
             <h2>Carrinho</h2>
+            <i id="idMenu" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
         </header>
         <main>
-            <nav>
+            <nav id="navMenu">
                 <ul>
                     <li>
                         <a href="index.php?id=1&acao=listarcarrinho&categoria=<?php echo $categoria?>">Meu Carrinho : </a>
@@ -33,12 +36,10 @@
                     <li>
                         <a href="./index.php">Categoria</a>
                     </li>
-                    <li>
-                        <?php
-                            require('./carrinho_lista.php');
-                            $oquefazer->listar();
-                        ?>
-                    </li>
+                    <?php
+                        require('./carrinho_lista.php');
+                        $oquefazer->listar();
+                    ?>
                 </ul>
             </nav>  
             <section>
@@ -63,6 +64,6 @@
                 ?>
             </section>
         </main>
-        <footer>Criado por <a href="">Clóvis Balreira Rodrigues</a></footer>
+        <!-- <footer>Criado por <a href="">Clóvis Balreira Rodrigues</a></footer> -->
     </body>
 </html>

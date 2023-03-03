@@ -20,7 +20,7 @@
     if($acao == 'ver_pedido'){
         $oquefazer->ver_pedido();            
         $mostra = new layout();
-        $mostra->mostrar_cliente();
+        //$mostra->mostrar_cliente();
         $oquefazer->listar_carrinho();
     }
     if($acao == ""){

@@ -10,8 +10,8 @@ class Luta{
     public function setDesafiado($d){$this->desafiado = $d;}
     public function getDesafiante(){return $this->desafiante;}
     public function setDesafiante($d){$this->desafiante = $d;}    
-    public function getRounds(){return $this->round;}
-    public function setRounds($r){$this->round = $r;}
+    public function getRounds(){return $this->rounds;}
+    public function setRounds($r){$this->rounds = $r;}
     public function getAprovada(){return $this->aprovada;}
     public function setAprovada($a){$this->aprovada = $a;}    
 

@@ -1,7 +1,7 @@
 <?php
     $banco = mysqli_connect("localhost", "root", "", "bd_games");
     if($banco->connect_errno){
-        echo "<p>Encontrei um erro $banco->errno --> $banco->error</p>";
+        echo "<p>Encontrei um erro $banco->errno --> $banco->errno</p>";
         die();
     }//else{ echo 'conectou'}
 
