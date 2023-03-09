@@ -25,7 +25,7 @@
             <i id="idMenu" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
         </header>
         <main>
-            <nav id="navMenu">
+            <nav id="">
                 <ul>
                     <li>
                         <a href="index.php?id=1&acao=listarcarrinho&categoria=<?php echo $categoria?>">Meu Carrinho : </a>

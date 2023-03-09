@@ -1,0 +1,324 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body{
+    /*background-color: red;*/
+}
+header{
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: yellow;
+}
+
+header img{
+    margin: 1rem 0 1rem;
+    width: 50%;
+}
+
+#menu{
+    background-color: rgba(255, 255, 255, 0.733);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 999;
+}
+#idMenu{
+    color: black;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#menu > nav{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding-left: 3rem;
+}
+
+nav a{
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+.slide-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+.slide-list{
+    display: flex;
+}
+.slide-item{
+    cursor: grab;
+    flex-shrink: 0;
+    width: 50vw;
+    padding: 0 1rem;
+}
+.slide-content{
+    box-shadow: 10px 10px 10px#0000003f;
+    border-radius: 10px;
+    border: 1px solid #fff; 
+    position: relative;   
+}
+#arrowLeft, #arrowRight{
+    color: #000000c4;
+    font-size: 4rem;
+}
+.slide-image{
+    border-radius: 10px;
+    width: 100%;
+    height: 30rem;
+}
+.slide-description{
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top ,#000000, transparent);
+}
+.slide-description h3{
+    position: relative;
+    top: .1rem;
+}
+.slide-nav-button{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 2rem;
+    z-index: 1;
+    border: 0;
+}
+.slide-nav-previous{
+    left: 16rem;    
+}
+.slide-nav-next{
+    right: 16rem;
+}
+.slide-controls{
+    margin: 1.5rem auto 0;
+}
+.slide-control-button{
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    margin: 0 .5rem;
+}
+.slide-control-button.active{
+    color: #cd8cf5;
+}
+h2{
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    padding: 2rem 0;
+}
+#sectionProdutos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+}
+#sectionProdutos h2{
+    width: 100%;
+    padding: auto;
+}
+#sectionPesquisa{
+    margin-top: 3rem;
+    margin-left: 4rem;
+    align-items: center;
+}
+.sectionRemover{
+    display: none;
+}
+#sectionProdutos div, .sectionAparecer{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    gap: 1rem;
+    margin-inline: 2rem;
+    flex-wrap: wrap;
+}
+#sectionProdutos div div, .sectionAparecer div{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sectionAparecer div{
+    margin-right: 2rem;
+}
+#sectionProdutos div div img, .sectionAparecer div img{
+    width: 15rem;
+    height: 9rem;
+}
+#sectionProdutos div div p.nome, #sectionPesquisa div p.nomePesquisa{
+    text-align: center;
+    font-weight: bold;
+}
+.fale-conosco{
+    cursor: pointer;
+    background-color: orange;
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    border: none;
+    border-radius: 50px;
+}
+#mapa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 auto;
+}
+address{
+    text-align: center;
+    font-size: 1.5rem;
+}
+iframe{
+    margin: 1rem auto;
+}
+footer{
+    background-color: black;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+#redes-sociais div h3{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+}
+#icon-redes-sociais{
+    display: flex;
+    justify-content: space-evenly;
+}
+ion-icon{
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+#dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#cnpj{
+    text-align: center;
+}
+#cnpj p{
+    margin-bottom: 1rem;
+}
+label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#divPesquisar{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+}
+#divPesquisar{
+    display: flex;
+    justify-content: end;
+}
+label{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+input[type="text"]{
+    background-color: rgba(128, 128, 128, 0.301);
+    border: none;
+    border-radius: 2rem;
+    width: 20%;
+    padding: .5rem;
+    font-size: .8rem;
+}
+@media screen and (max-width: 750px) {
+    .slide-item{
+        width: 90vw;
+    }
+    .slide-image{
+        width: 100%;
+        height: 20rem;
+    }    
+    .slide-nav-previous{
+        left: .1rem;    
+    }
+    .slide-nav-next{
+        right: .1rem;
+    }    
+    h2{
+        font-size: 1.5rem;
+    }
+    #menu > nav{
+        width: 90vw;
+        height: 100vh;
+    }
+    #sectionProdutos div, .sectionAparecer{
+        margin-inline: 1.7rem;
+    }
+    input[type="text"]{
+        width: 50%;
+    }
+    #sectionProdutos div div, #sectionProdutos div div img, .sectionAparecer div, .sectionAparecer div img{
+        width: 7rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 1rem;
+    }    
+    #cnpj{
+        margin-top: 2rem;
+    }
+}
