@@ -27,7 +27,7 @@ main {
 }
 
 main::before {
-    content: "Exemplo de PHP e MySql";
+    content: "Exemplo de PHP Moderno";
     font: 10pt Arial;
     font-weight: bold;
     color: white;
@@ -63,4 +63,20 @@ span.foco {
 	padding: .8rem;
     margin: auto;
     box-shadow: .2rem .2rem .1rem #aaaaaa;
+}
+main#principal h1{
+    text-align: center;
+}
+main#principal div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+main#principal div div{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+main#principal div div h2{
+    text-align: center;
 }

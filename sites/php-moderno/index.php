@@ -8,16 +8,29 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <main>
-        <h1>PHP - Moderno</h1>
-            <a href="./ex000/index.php" target="_black">Comando echo, emoj</a>
-            <a href="./ex001/index.php" target="_black">Dados do servidor</a>
-            <a href="./ex002/index.php" target="_black">Funções</a>
-            <a href="./ex003/index.php" target="_black">Variaveis e constantes</a>
-            <a href="./ex004/index.php" target="_black">Tipos Primitivos</a>
-            <a href="./ex005/index.php" target="_black">Tipos String</a>
-            <a href="./ex006/index.php" target="_black">Formulario</a>
-            <a href="./ex007/index.php" target="_black">Operadores aritméticos, expressões aritméticas</a>
+    <main id="principal">
+        <h1>P.H.P. Moderno</h1>
+        <div>
+            <div>
+                <h2>Exercicios</h2>
+                    <a href="./exercicio/ex000/index.php" target="_black">Comando echo, emoj</a>
+                    <a href="./exercicio/ex001/index.php" target="_black">Dados do servidor</a>
+                    <a href="./exercicio/ex002/index.php" target="_black">Funções</a>
+                    <a href="./exercicio/ex003/index.php" target="_black">Variaveis e constantes</a>
+                    <a href="./exercicio/ex004/index.php" target="_black">Tipos Primitivos</a>
+                    <a href="./exercicio/ex005/index.php" target="_black">Tipos String</a>
+                    <a href="./exercicio/ex006/index.php" target="_black">Formulario</a>
+                    <a href="./exercicio/ex007/index.php" target="_black">Operadores aritméticos, expressões aritméticas</a>
+            </div>
+            <div>
+                <h2>Desafios</h2>
+                    <a href="./desafio/des000/index.php" target="_black">Antecessor e sucessor</a>
+                    <a href="./desafio/des001/index.php" target="_black">Trabalhando com números aleatórios</a>
+                    <a href="./desafio/des002/index.php" target="_black">Conversor de moedas v1.0</a>
+                    <a href="./desafio/des003/index.php" target="_black">Conversor de moedas v2.0</a>
+                    <a href="./desafio/des004/index.php" target="_black">Analizador de número real</a>
+            </div>
+        </div>
     </main>
 </body>
 </html>
