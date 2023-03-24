@@ -16,6 +16,7 @@
         <a href="./sites/carrinho/index.php" target="_blank">Carrinho ( Informaticon )</a>
         <a href="./sites/supermercado/index.php" target="_blank">Projeto Gestão de Super Mercado</a>
         <a href="./sites/mysql/index.php" target="_blank">MySql ( Básico curso em vídeo )</a>
+        <a href="./sites/loja/index.php" target="_blank">Loja</a>
     </main>
 </body>
 </html>

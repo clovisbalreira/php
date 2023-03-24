@@ -11,11 +11,21 @@
     <main>
         <h1>Conversor de moedas v1.0</h1>
         <?php
-            $valor = $_GET["valor"] ?? "0";
-            $cotacao = 5.22;
-            $dolar = $valor / $cotacao;
-            echo "<p>Seus R$ $valor equivalem a  <strong>US$ $dolar</strong></p>";
-            echo "<p><strong>Cotação fixa de R$: $cotacao</strong> informada diretamente no código.</p>";
+            $real = $_GET["real"] ?? "0";
+            $cotacao = 5.17;
+            $dolar = $real / $cotacao;
+            /* 
+                formatação de moedas com internacionalização
+                biblioteca intl ( interlization )
+                no arquivo php.uni habilida intl ou phpintl
+                pt_BR == Brasil - BRL 
+                pt_PT == Portugal - 
+                ru_RU == Russia -
+                us == Estados unidos - USD 
+            */
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+            echo "<p>Seus R$ ". number_format($real, 2 , ",", ".")  ." equivalem a  <strong>".  numfmt_format_currency($padrao, $dolar, "USD") ."</strong></p>";
+            echo "<p><strong>Cotação fixa de ".  numfmt_format_currency($padrao, $dolar, "BRL") . "</strong> informada diretamente no código.</p>";
         ?>
         <p>
             <a href="javascript:history.go(-1)">Voltar para a página anterior</a>

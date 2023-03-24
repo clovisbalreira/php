@@ -7,14 +7,28 @@
     <title>Resultado</title>
     <link rel="stylesheet" href="../../css/formulario.css">
 </head>
-<body>
+<body>    
     <main>
         <h1>Conversor de moedas v2.0</h1>
         <?php
-            $valor = $_GET["valor"] ?? "0";
-            $cotacao = 5.22;
-            $dolar = $valor / $cotacao;
-            echo "<p>Seus R$ $valor equivalem a  <strong>US$ $dolar</strong></p>";
+            $inicio = date("m-d-Y", strtotime("-7 days"));
+            $fim = date("m-d-Y");
+            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''.$inicio.'\'&@dataFinalCotacao=\''.$fim.'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+            $dados = json_decode(file_get_contents($url), true);
+            $cotacao = $dados['value'][0]['cotacaoCompra'];
+            $real = $_GET["real"] ?? "0";
+            $dolar = $real / $cotacao;
+            /* 
+            formatação de moedas com internacionalização
+            biblioteca intl ( interlization )
+            no arquivo php.uni habilida intl ou phpintl
+            pt_BR == Brasil - BRL 
+            pt_PT == Portugal - 
+            ru_RU == Russia -
+            us == Estados unidos - USD 
+            */
+            $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+            echo "<p>Seus R$ ". number_format($real, 2 , ",", ".")  ." equivalem a  <strong>".  numfmt_format_currency($padrao, $dolar, "USD") ."</strong></p>";
             echo "<p>*Cotação obtida diretamente do site do <strong>Banco Central do Brasil</strong></p>";
         ?>
         <p>
