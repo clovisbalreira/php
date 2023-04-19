@@ -13,12 +13,14 @@
     </header>
     <main>
         <?php
-            $numero = $_GET["nome"] ?? "";
-            echo "<p>Analisando o número <strong>$numero</strong> informado pelo usuário:</p>";
+            $numero = $_POST["numero"] ?? 0;
+            echo "<p>Analisando o número <strong>".number_format($numero,3,",",".")."</strong> informado pelo usuário:</p>";
+            $inteiro = (int) $numero;
+            $fracao = $numero - $inteiro;
         ?>
         <ul>
-            <li>A parte inteira do número é <?php ?></li>
-            <li>A parte fracionaria do número é <?php ?></li>
+            <li>A parte inteira do número é <strong><?php echo number_format($inteiro,0,",",".");?></strong></li>
+            <li>A parte fracionaria do número é <strong><?php echo number_format($fracao,3,",",".");?></strong></li>
         </ul>
         <p>
             <a href="javascript:history.go(-1)">Voltar para a página anterior</a>

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../../css/formulario.css">
 </head>
 <body>
-        <h1>Analizador de Número Real</h1>
+    <h1>Analizador de Número Real</h1>
     <section>
-        <form action="resultado.php" method="get">
+        <form action="resultado.php" method="post">
             <label for="numero">Número Real:</label>
             <input type="number" name="numero" id="numero" step=".001">
             <input type="submit" value="Analisar">
