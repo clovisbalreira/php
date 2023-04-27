@@ -10,25 +10,23 @@
 <body>
     <section>
         <?php
-            $hoje = date('Y');
+            $atual = date('Y');
+            $nascimento = $_GET['nascimento'] ?? 1900;
+            $anoAtual = $_GET['atual'] ?? $atual;
+            $idade =  intval($anoAtual) - intval($nascimento);
         ?>
         <h1><strong>Calculando a sua idade</strong></h1>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
             <label for="nascimento">Em que ano você nasceu?</label>
-            <input type="number" name="nascimento" id="nascimento">
-            <label for="atual">Quer saber sua idade em que ano ? ( atualmente estamos em <strong><?=$hoje?></strong>)</label>
-            <input type="number" name="atual" id="atual" value="<?=$hoje?>">
+            <input type="number" name="nascimento" id="nascimento" value="<?=$nascimento?>" min="1900" max="<?= $atual - 1?>">
+            <label for="atual">Quer saber sua idade em que ano ? ( atualmente estamos em <strong><?=$atual?></strong>)</label>
+            <input type="number" name="atual" id="atual" value="<?=$atual?>" min="1900">
             <input type="submit" value="Qual ser'minha idade?">
         </form>
     </section>
     <section id="resultado">
-        <?php
-            $nascimento = $_GET['nascimento'] ?? 0;
-            $atual = $_GET['atual'] ?? $hoje;
-            $idade =  intval($atual) - intval($nascimento);
-        ?>
         <h2>Resultado</h2>
-        <p>Quem nasceu em <?=$nascimento?> vai ter <strong><?=$idade?> anos</strong> em <?=$atual?>!</p>
+        <p>Quem nasceu em <?=$nascimento?> vai ter <strong><?=$idade?> anos</strong> em <?=$anoAtual?>!</p>
     </section>
 </body>
 </html>
