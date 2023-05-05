@@ -9,9 +9,9 @@
 </head>
 <body>
     <?php
-        $arduino = $_REQUEST["arduino"] ?? 'Não';
+        $arduino = $_REQUEST["arduino"] ?? 'Sim';
         $lambada = $_REQUEST["lampada"] ?? 'Apagar';
-        $conecaoArduino = fopen('COM5', 'w'); // conexao com porta serial parametro porta , metodo
+        $conecaoArduino = fopen('COM3', 'w'); // conexao com porta serial parametro porta , metodo
         sleep(2); // delay
         
         if($lambada == 'Apagar'){
@@ -22,8 +22,8 @@
             $imagemLambada = './img/lampada-acesa.jpg';
         }
         if($arduino == 'Sim'){
-            //fwrite($conecaoArduino,$acao); // onde vai escrever e o que quer escrever
-            //fclose($conecaoArduino); // fechar conexao
+            fwrite($conecaoArduino,$acao); // onde vai escrever e o que quer escrever
+            fclose($conecaoArduino); // fechar conexao
         }
         //aula 4599
         /* 
