@@ -23,10 +23,6 @@
         <h2>Totalizando tudo</h2>
         <p>Analizando o valor que você digitou, <strong><?=number_format($inputSegundos,0,",",".");?> segundos </strong>equiváliem a um total de:</p>
         <?php
-            //semana = 7 dias x 24 horas = 168 horas x 60 minitos = 10080 minutos x 60 segundos = 604800 segundos
-            //dias = 24 horas X 60 minutos = 1440 minutos X 60 segundos = 86400 segundos
-            // minutos = 60 minutos x 60 segundos = 3600 segundos 
-            //minutos = 60 segundos 
             $semanas = $inputSegundos / 604800;
             $inputSegundos = $inputSegundos % 604800;
             $dias = $inputSegundos / 86400;
