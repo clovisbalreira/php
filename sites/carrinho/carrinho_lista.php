@@ -35,35 +35,44 @@
 
         function carrinho($busca){
             $categoria = $_REQUEST['categoria'] ?? 0;
-            echo "<form action='index.php?id=1&categoria=$categoria' method='post'>";
-            echo "<table>";
+            echo "<form action='index.php?id=1&categoria=$categoria' method='post' id='form-carrinho'>";
+            echo "<table id='tabela-carrinho'>";
             echo "<caption>Meu Carrinho de Compras</caption>";
-            echo "<tr><td>Descrição<td>Quantidade<td>Preço<td>Total";
-            echo "<tr>";
+            echo "<thead>
+                    <tr>
+                        <td>Descrição</td>
+                        <td>Quantidade</td>
+                        <td>Preço</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>";
             if(!$busca){
                 echo "<tr><td>Infelizmente a busca teu um erro $busca";
             } else {
                 $totalGeral = 0;
                 if ( $busca->num_rows > 0){
-                    echo "<table>";
                         $totalGeral = 0;        
+                        echo "<tbody>";
                         while($reg = $busca->fetch_object()){
                             $total = $reg->CAR_QUANTIDADE*$reg->PROD_VALOR;
                             $totalGeral += $total;
                             echo "<tr>";
                                 echo "<td>".$reg->PROD_DESCRICAO;
-                                echo "<td><input type='number' name='qtd[]' size='2' value='$reg->CAR_QUANTIDADE'/>";
+                                echo "<td><input type='number' name='qtd[]' size='2' min='0' value='$reg->CAR_QUANTIDADE'/>";
                                 echo "<input type='hidden' name='codigo[]' size='2' value='$reg->PROD_CODIGO'/>";
                                 echo "<td>".formata_dinheiro($reg->PROD_VALOR);
                                 echo "<td>". formata_dinheiro($total);
                                 echo "<input type='hidden' name='total[]' size='2' value='$total'/>";
                         }
                     }
+                    echo "</tbody>";
+                    echo "<tfoot>";
                     echo "<tr><td colspan=3>Total do Carrinho<td>".formata_dinheiro($totalGeral);
                     echo "<tr><td colspan=4>";echo "<input type='submit' name='botao_atualizar' id='botao_atualizar' value='Atualizar Pedido'/>";
                     echo "<input type='hidden' name='acao' id='acao' value='atualizar_carrinho'/>";
                     echo "<button><a href='index.php?id=1&categoria=$categoria&acao=listar_produtos'>Continuar Comprando</a></button>";
                     echo "<button><a href='index.php?id=2&acao=finalizar_pedido'>Comprar</a></button>";
+                    echo "</tfoot>";
                 echo "</table>";
             echo "</form>";
            }

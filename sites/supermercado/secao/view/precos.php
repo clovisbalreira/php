@@ -95,7 +95,7 @@
 										<h5 class="card-title mb-0">Quantidade na caixa:</h5>
 									</div>
 									<div class="card-body">
-										<input onkeyup="precoContas()" onchange="precoContas()" type="number" min="0" class="form-control" id="quantidade" name="quantidade" value="<?Php echo isset($_GET['quantidadeEditar']) ? $_GET['quantidadeEditar'] : '' ?>" required>
+										<input onkeyup="precoContas()" onchange="precoContas()" type="number" min="1" class="form-control" id="quantidade" name="quantidade" value="<?Php echo isset($_GET['quantidadeEditar']) ? $_GET['quantidadeEditar'] : '' ?>" required>
 									</div>
 								</div>
 							</div>
@@ -115,7 +115,7 @@
 										<h5 class="card-title mb-0">Preço Total:</h5>
 									</div>
 									<div class="card-body">
-										<input type="number" step="0.01" class="form-control" placeholder="Valor total" id="precototal" name="precototal" value="<?Php echo isset($_GET['precoTotalEditar']) ? number_format($_GET['precoTotalEditar'] * $_GET['quantidadeEditar'],2)  : '' ?>" disabled>
+										<input type="number" step="0.01" class="form-control" placeholder="Valor total" id="precototal" name="precototal" value="" disabled>
 									</div>
 								</div>
 							</div>

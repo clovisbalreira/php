@@ -97,7 +97,7 @@ session_start();
 							<div class="col-12 col-lg-3">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title mb-0">Dia do pagamento</h5>
+										<h5 class="card-title mb-0">Data da compra</h5>
 									</div>
 									<div class="card-body">
 										<input type="date" class="form-control" name="diaPagamento" value="<?Php echo isset($_GET['diaPagamentoEditar']) ? $_GET['diaPagamentoEditar'] : date('Y-m-d') ?>" required readonly>

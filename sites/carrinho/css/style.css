@@ -90,6 +90,84 @@ footer{
     padding: .5rem;
 }
 
+/* carrinho */
+#form-carrinho{
+    width: 90%;
+    margin-inline: 5%;
+}
+
+#form-carrinho table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#form-carrinho table caption{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#form-carrinho table thead{
+    background-color: rgba(0, 0, 255, 0.555);
+}
+
+#form-carrinho table thead tr td{
+    text-align: center;
+    padding-block: .5rem;
+}
+
+#form-carrinho table tbody{
+    font-size: 1.4rem;
+}
+
+#form-carrinho table tbody tr{
+    border-bottom: 1px solid black;
+}
+
+#form-carrinho table tbody tr td{
+    padding-left: .5rem;
+    padding-block: .5rem;
+}
+
+#form-carrinho table tbody tr:nth-child(even){
+    background-color: white;
+}
+
+#form-carrinho table tbody tr:nth-child(odd){
+    background-color: rgb(206, 206, 206);
+}
+
+#form-carrinho table tbody tr td input{
+    border: none;
+    width: 5rem;
+    background-color: transparent;
+}
+
+#form-carrinho table tfoot{
+    background-color: rgba(0, 0, 255, 0.555);
+}
+
+#form-carrinho table tfoot tr:nth-child(1) td{
+    padding: 1rem ;
+}
+
+#form-carrinho table tfoot tr:nth-child(2) td{
+    padding: 1rem ;
+}
+
+#form-carrinho table tfoot tr:nth-child(2) td input,#form-carrinho table tfoot tr:nth-child(2) td button{
+    padding: .5rem 0;
+    background-color: rgba(255, 0, 0, 0.747);
+    margin-left: 3rem;
+    border: none;
+    border-radius: 20px;
+    width: 15rem;
+    box-shadow: 0 0 10px black;
+}
+
+#form-carrinho table tfoot tr:nth-child(2) td button a{
+    text-decoration: none;
+    color: black;
+}
 @media (max-width:920px) {
     header{
         position: relative;
