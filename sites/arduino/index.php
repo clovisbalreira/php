@@ -10,22 +10,62 @@
 <body>
     <?php
         $arduino = $_REQUEST["arduino"] ?? 'Sim';
-        $lambada = $_REQUEST["lampada"] ?? 'Apagar';
         $conecaoArduino = fopen('COM3', 'w'); // conexao com porta serial parametro porta , metodo
         sleep(2); // delay
-        
+    ?>
+    <div>
+        <h1>Controles de arduino</h1>
+        <form action="<?= $_SERVER['PHP_SELF']?>" method="post">
+            <h2>Possui arduino</h2>
+            <input type="submit" name="arduino" value="Sim">
+            <input type="submit" name="arduino" value="Não">
+        </form>
+    </div>
+    <?php    
+        $lambada = $_REQUEST["lampada"] ?? 'Apagar';
         if($lambada == 'Apagar'){
-            $acao = '0';
+            $acaoLambada = '0';
             $imagemLambada = './img/lampada-apagada.jpg';
+        }else if($lambada == 'Pisca'){
+            $acaoLambada = '2';    
+            $imagemLambada = './img/lampada-apagada.jpg';
+            $imagemLambada = './img/lampada-acesa.jpg';
         }else{
-            $acao = '1';
+            $acaoLambada = '1';
             $imagemLambada = './img/lampada-acesa.jpg';
         }
-        if($arduino == 'Sim'){
-            fwrite($conecaoArduino,$acao); // onde vai escrever e o que quer escrever
-            fclose($conecaoArduino); // fechar conexao
+        fwrite($conecaoArduino,$acaoLambada); // onde vai escrever e o que quer escrever
+        fclose($conecaoArduino); // fechar conexao
+    ?>
+    <!--
+        -->
+    <div>
+        <h1>Acender e piscar</h1>
+        <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
+            <img id="lambada" src="<?=$imagemLambada ?>" alt="Lambada">
+            <div>
+                <input type="submit" name="lampada" value="Acender">
+                <input type="submit" name="lampada" value="Pisca">
+                <input type="submit" name="lampada" value="Apagar">
+            </div>
+        </form>
+    </div>
+    <?php    
+        $semaforo = $_REQUEST["semaforo"] ?? 'Ligar';
+        if($semaforo == 'Ligar'){
+            $acaoSemaforo = '1';
+            echo "pedestre $acaoSemaforo";            
+        }else if($semaforo == 'Pedestre'){
+            $acaoSemaforo = '3';    
+            echo "pedestre $acaoSemaforo";            
+        }else{
+            $acaoSemaforo = '0';
+            echo "pedestre $acaoSemaforo";            
         }
-        //aula 4599
+        //if($arduino == 'Sim'){
+        //    fwrite($conecaoArduino,$acaoSemaforo); // onde vai escrever e o que quer escrever
+        //    fclose($conecaoArduino); // fechar conexao
+        //}
         /* 
         criar redes externa
         1) acessar o modem dsl 192.168.1.1
@@ -33,16 +73,14 @@
         3) acessar meuip.com.br
         */
     ?>
-    <h1>Controles de arduino</h1>
-    <form action="<?= $_SERVER['PHP_SELF']?>" method="post">
-        <h2>Possui arduino</h2>
-        <input type="submit" name="arduino" value="Sim">
-        <input type="submit" name="arduino" value="Não">
-    </form>
-    <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
-        <img id="lambada" src="<?=$imagemLambada ?>" alt="Lambada">
-        <input type="submit" name="lampada" value="Acender">
-        <input type="submit" name="lampada" value="Apagar">
-    </form>
+    <div>
+        <h1>Semaforo</h1>
+        <form action="<?= $_SERVER['PHP_SELF']?>" method="get">            <div>
+                <input type="submit" name="semaforo" value="Ligar">
+                <input type="submit" name="semaforo" value="Pedestre">
+                <input type="submit" name="semaforo" value="Parar">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
