@@ -14,7 +14,8 @@
         <a href="./sites/php-moderno/index.php" target="_blank">P.H.P. Moderno ( curso em vídeo )</a>
         <a href="./sites/estudonauta/index.php" target="_blank">Projeto ( Estudonauta )</a>
         <a href="./sites/carrinho/index.php" target="_blank">Carrinho ( Informaticon )</a>
-        <a href="./sites/supermercado/index.php" target="_blank">Projeto Gestão de Super Mercado</a>
+        <a href="./sites/supermercado/secao/index.php" target="_blank">Projeto Gestão de Super Mercado</a>
+        <a href="./sites/supermercado/bancodedados/index.php" target="_blank">Projeto Gestão de Super Mercado - ( Banco de dados )</a>
         <a href="./sites/mysql/index.php" target="_blank">MySql ( Básico curso em vídeo )</a>
         <a href="./sites/loja/index.php" target="_blank">Loja</a>
     </main>

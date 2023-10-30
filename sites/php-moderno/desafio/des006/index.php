@@ -26,7 +26,6 @@
         <?php
             $quantidadeSalario = intdiv($salario, $salarioMinimo);
             $mais = $salario - ($salarioMinimo * $quantidadeSalario);
-            //$mais = $salario % $salarioMinimo;
         ?>
         <h2>Resultado Final</h2>
         <p>Quem recebe um salário de <?=numfmt_format_currency($padrao, $salarioMinimo, "BRL")?> ganha <strong><?=floor($quantidadeSalario)?> salários mínimos </strong>+ <?=numfmt_format_currency($padrao, $mais, "BRL")?></p>

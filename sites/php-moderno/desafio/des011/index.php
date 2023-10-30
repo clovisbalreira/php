@@ -23,32 +23,16 @@
         <h2>Totalizando tudo</h2>
         <p>Analizando o valor que você digitou, <strong><?=number_format($inputSegundos,0,",",".");?> segundos </strong>equiváliem a um total de:</p>
         <?php
-            $semanas = 0;
-            $dias = 0;
-            $horas = 0;
-            $minutos = 0;
-            $segundos = 0;
-            if($inputSegundos >= 604800){
-                $semanas = $inputSegundos / 604800;
-                $inputSegundos = $inputSegundos % 604800;
-            }
-            if($inputSegundos >= 86400){
-                $dias = $inputSegundos / 86400;
-                $inputSegundos = $inputSegundos % 86400;
-            }
-            if($inputSegundos >= 3600){
-                $horas = $inputSegundos / 3600;
-                $inputSegundos = $inputSegundos % 3600;
-            }
-            if($inputSegundos >= 60){
-                $minutos = $inputSegundos / 60;
-                $inputSegundos = $inputSegundos % 60;
-            }
-            if($inputSegundos < 60){
-                if($inputSegundos > 0){
-                    $segundos = $inputSegundos;
-                }
-            } 
+            $semanas = $inputSegundos / 604800;
+            $inputSegundos = $inputSegundos % 604800;
+            $dias = $inputSegundos / 86400;
+            $inputSegundos = $inputSegundos % 86400;
+            $horas = $inputSegundos / 3600;
+            $inputSegundos = $inputSegundos % 3600;
+            $minutos = $inputSegundos / 60;
+            $inputSegundos = $inputSegundos % 60;
+            $segundos = $inputSegundos;
+             
         ?>
         <ul>
             <li><?=intval($semanas)?> semanas</li>
